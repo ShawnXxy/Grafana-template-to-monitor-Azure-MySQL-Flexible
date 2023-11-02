@@ -31,10 +31,19 @@ Before you start, ensure that you an instance of Azure Database for MySQL – Fl
 ## Steps
 Now, to use the template, perform the following steps:
 
-1. Create an Azure Grafana instance via the Portal by using the information in the article Quickstart: create an Azure Managed Grafana instance using the Azure portal. You can also use self-managed instances or Grafana instances running on other clouds works.
+1. Create an Azure Grafana instance via the Portal by using the information in the article Quickstart: [create an Azure Managed Grafana instance using the Azure portal](https://learn.microsoft.com/en-us/azure/managed-grafana/quickstart-managed-grafana-portal). You can also use self-managed instances or Grafana instances running on other clouds works.
 1. Create connectors in Grafana to ensure that the Azure Monitor plugin is ready and that your Azure Database for MySQL instance is connected.
   - For Azure Grafana, Azure Monitor is built in. You will need to configure it to connect to your preferred Azure subscription.
   - For self-hosted instances or for Grafana instances running on other platforms, you can install the plugin by following the information in the article Azure Monitor plugin for Grafana.
+    
+    ![image](https://github.com/ShawnXxy/Grafana-template-to-monitor-Azure-MySQL-Flexible/assets/17153057/e4752908-c5e5-439d-93b9-110be56f0c76)
+
 1. Import the template JSON file.
+   
+   ![image](https://github.com/ShawnXxy/Grafana-template-to-monitor-Azure-MySQL-Flexible/assets/17153057/8f2d10f4-fdda-4e6a-a6de-c1717622f247)
+
 1. Check that the correct Azure Database for MySQL flexible server displays in the breadcrumb trail at the top, and then verify that each widget/panel works properly.
+   
+   ![image](https://github.com/ShawnXxy/Grafana-template-to-monitor-Azure-MySQL-Flexible/assets/17153057/e8f5c580-4d0b-417b-9098-01b6501d9758)
+
  
