@@ -1,4 +1,79 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_AZURE_MONITOR",
+      "label": "Azure Monitor",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "grafana-azure-monitor-datasource",
+      "pluginName": "Azure Monitor"
+    },
+    {
+      "name": "DS_EXPRESSION",
+      "label": "Expression",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "__expr__"
+    },
+    {
+      "name": "DS_MYSQL",
+      "label": "MySQL",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "mysql",
+      "pluginName": "MySQL"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "__expr__",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "barchart",
+      "name": "Bar chart",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "bargauge",
+      "name": "Bar gauge",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.2.1"
+    },
+    {
+      "type": "datasource",
+      "id": "grafana-azure-monitor-datasource",
+      "name": "Azure Monitor",
+      "version": "1.0.0"
+    },
+    {
+      "type": "datasource",
+      "id": "mysql",
+      "name": "MySQL",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -26,7 +101,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 16311,
   "graphTooltip": 0,
-  "id": 26,
+  "id": null,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -58,6 +133,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -232,6 +308,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -373,6 +450,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -532,6 +610,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -709,6 +788,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -828,6 +908,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1031,6 +1112,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1077,32 +1159,7 @@
           },
           "unit": "none"
         },
-        "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "Storage Limit"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": [
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 11,
@@ -1303,6 +1360,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1378,9 +1436,13 @@
             "metricDefinition": "Microsoft.DBforMySQL/flexibleServers",
             "metricName": "backup_storage_used",
             "metricNamespace": "Microsoft.DBforMySQL/flexibleServers",
-            "resourceGroup": "$resource_group",
-            "resourceName": "$resource",
-            "timeGrain": "auto",
+            "resources": [
+              {
+                "resourceGroup": "$resource_group",
+                "resourceName": "$resource"
+              }
+            ],
+            "timeGrain": "PT15M",
             "top": ""
           },
           "datasource": {
@@ -1424,6 +1486,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1578,6 +1641,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1729,6 +1793,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1950,6 +2015,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -2254,6 +2320,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -2440,6 +2507,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -2604,7 +2672,7 @@
         {
           "datasource": {
             "type": "__expr__",
-            "uid": "__expr__"
+            "uid": "${DS_EXPRESSION}"
           },
           "expression": "100*(1 - $A/$B)",
           "hide": false,
@@ -2618,7 +2686,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2626,6 +2694,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -2697,7 +2766,7 @@
           "dataset": "mysql",
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -2742,7 +2811,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2777,6 +2846,7 @@
         "displayMode": "lcd",
         "minVizHeight": 10,
         "minVizWidth": 0,
+        "namePlacement": "auto",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [],
@@ -2786,12 +2856,12 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -2845,7 +2915,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2895,12 +2965,12 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "format": "table",
           "group": [],
@@ -2936,7 +3006,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2992,12 +3062,12 @@
           }
         ]
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3029,7 +3099,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3085,12 +3155,12 @@
           }
         ]
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3135,7 +3205,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3170,6 +3240,7 @@
         "displayMode": "lcd",
         "minVizHeight": 10,
         "minVizWidth": 0,
+        "namePlacement": "auto",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [],
@@ -3179,12 +3250,12 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3216,7 +3287,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3251,6 +3322,7 @@
         "displayMode": "lcd",
         "minVizHeight": 10,
         "minVizWidth": 0,
+        "namePlacement": "auto",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [],
@@ -3260,12 +3332,12 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3297,7 +3369,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3361,12 +3433,12 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3398,7 +3470,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3462,12 +3534,12 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3499,7 +3571,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3546,12 +3618,12 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3583,7 +3655,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3633,12 +3705,12 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3670,7 +3742,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3678,6 +3750,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -3749,7 +3822,7 @@
           "dataset": "mysql",
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3782,7 +3855,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3832,12 +3905,12 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -3882,7 +3955,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -3890,6 +3963,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -3985,7 +4059,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -4025,6 +4099,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -4133,7 +4208,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -4180,12 +4255,12 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -4217,7 +4292,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "${DS_AzMySQL}"
+        "uid": "${DS_MYSQL}"
       },
       "fieldConfig": {
         "defaults": {
@@ -4291,12 +4366,12 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "10.1.1",
+      "pluginVersion": "10.2.1",
       "targets": [
         {
           "datasource": {
             "type": "mysql",
-            "uid": "${DS_AzMySQL}"
+            "uid": "${DS_MYSQL}"
           },
           "editorMode": "code",
           "format": "table",
@@ -4328,16 +4403,11 @@
   ],
   "refresh": "",
   "schemaVersion": 38,
-  "style": "dark",
   "tags": [],
   "templating": {
     "list": [
       {
-        "current": {
-          "selected": false,
-          "text": "",
-          "value": ""
-        },
+        "current": {},
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
           "uid": "${DS_AZURE_MONITOR}"
@@ -4372,7 +4442,7 @@
         "current": {
           "selected": false,
           "text": "Azure Monitor",
-          "value": "${DS_AZURE_MONITOR}"
+          "value": "azure-monitor-oob"
         },
         "hide": 0,
         "includeAll": false,
@@ -4388,11 +4458,7 @@
         "type": "datasource"
       },
       {
-        "current": {
-          "selected": false,
-          "text": "$subscription",
-          "value": "$subscription"
-        },
+        "current": {},
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
           "uid": "${DS_AZURE_MONITOR}"
@@ -4420,11 +4486,7 @@
         "type": "query"
       },
       {
-        "current": {
-          "selected": false,
-          "text": "$resource_group",
-          "value": "$resource_group"
-        },
+        "current": {},
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
           "uid": "${DS_AZURE_MONITOR}"
@@ -4453,11 +4515,7 @@
         "type": "query"
       },
       {
-        "current": {
-          "selected": false,
-          "text": "microsoft.healthcareapis/services",
-          "value": "microsoft.healthcareapis/services"
-        },
+        "current": {},
         "datasource": {
           "type": "grafana-azure-monitor-datasource",
           "uid": "${DS_AZURE_MONITOR}"
@@ -4489,13 +4547,13 @@
     ]
   },
   "time": {
-    "from": "now-2d",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Azure MySQL Flexible Server Monitor",
   "uid": "UvKB6Funk",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
