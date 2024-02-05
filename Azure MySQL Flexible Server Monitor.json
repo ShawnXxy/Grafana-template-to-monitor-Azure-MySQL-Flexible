@@ -3260,7 +3260,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT DIGEST_TEXT,AVG_TIMER_WAIT/1000000000000 AS AVG_TIMER_WAIT_SEC FROM events_statements_summary_by_digest ORDER BY AVG_TIMER_WAIT_SEC DESC LIMIT 15",
+          "rawSql": "SELECT DIGEST_TEXT,AVG_TIMER_WAIT/1000000000000 AS AVG_TIMER_WAIT_SEC FROM performance_Schema.events_statements_summary_by_digest ORDER BY AVG_TIMER_WAIT_SEC DESC LIMIT 15",
           "refId": "A",
           "sql": {
             "columns": [
@@ -3628,7 +3628,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT DIGEST_TEXT,COUNT_STAR,FIRST_SEEN,LAST_SEEN FROM events_statements_summary_by_digest ORDER BY COUNT_STAR DESC;\r\n",
+          "rawSql": "SELECT DIGEST_TEXT,COUNT_STAR,FIRST_SEEN,LAST_SEEN FROM performance_schema.events_statements_summary_by_digest ORDER BY COUNT_STAR DESC;\r\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -4440,7 +4440,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "Azure Monitor",
           "value": "azure-monitor-oob"
         },
